@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Spartan', sans-serif;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+}
+.menu-icon, .closeBtn{
+    display: none;
+}
+nav{
+    margin: 30px 0 0 30px;
+}
+.firstSect{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.btn{
+    line-height: 2;
+   letter-spacing: 4px;
+   background-color: white;
+   border: none;
+   font-size: 16px;
+
+}
+.homeBody{
+    background-image: url("images/desktop-image-hero-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.aboutBody{
+    background-image: url("images/desktop-image-hero-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.shopBody{
+    background-image: url("images/desktop-image-hero-3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.secondSect{
+    display: grid;
+    grid-template-columns: 400px 1fr 400px;
+}
+.aboutFur{
+    margin: 30px auto;
+    width: 550px;
+}
+
+/*carousel*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  height: 350px;
+  position: relative;
+  margin: 100px auto 20px;
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  background-color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.controls{
+   display: flex;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes fade {
+  from {opacity: .99}
+  to {opacity: 1}
+}
+/*carousel*/
+
+
+
+@media only screen and (max-device-width: 768px){
+    body{
+        overflow: visible;
+    }
+    img{
+        object-fit: cover;
+        width: 768px;
+    }
+    .firstSect{
+        grid-template-columns:  1fr;
+    }
+    .secondSect{
+        grid-template-columns: 1fr;
+    }
+    .homeBody, .aboutBody, .shopBody {
+      height: 500px;
+    }
+    .menu-icon, .closeBtn{
+        display: inline;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu-icon{
+        margin: 30px 0 0 30px;
+    }
+    .logo{
+        display: none;
+    }
+    
+    .navbar{
+        font-size: 30px;
+        background-color:#fff;
+        display: none;
+    }
+    nav{
+        margin: 0;
+        padding: 30px 20px ;
+     
+    }
+ 
+    a{
+        color: #000;
+        padding:  10px 0 0 50px;
+    }
+    
+}
+
+
+@media only screen and (max-device-width: 414px){
+    img{
+        width: 414px;
+    }
+ 
+    .slideshow-container {
+        max-width: 370px;
+        
+      }
+      .aboutFur{
+        margin: 40px 20px;
+        width: 370px;
+    } 
+    .navbar{
+        font-size: 18px;
+    }
+    a{
+        padding:  10px 0 0 18px;
+    }
+}
+@media only screen and (max-device-width: 375px){
+    img{
+        width: 375px;
+    }
+    .slideshow-container {
+        max-width: 320px;
+        
+      }
+      .aboutFur{
+        margin: 40px 20px;
+        width: 320px;
+    }
+    .navbar{
+        font-size: 17px;
+    }
+    a{
+        padding:  10px 0 0 11px;
+    }
+  
+
+}
+
+@media only screen and (max-device-width: 320px){
+    img{
+        width: 320px;
+    }
+    .slideshow-container {
+        max-width: 300px;
+        
+      }
+      .aboutFur{
+        margin: 30px auto;
+        width: 300px;
+    }
+    .navbar{
+        font-size: 14px;
+    }
+}
